@@ -51,11 +51,11 @@ public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(ProductoAdapter.ViewHolder viewHolder, int position) {
-        User user = this.users.get(position);
-        viewHolder.fullname.setText(user.getFullname());
-        viewHolder.category.setText(user.getCategory());
-        viewHolder.precio.setText(user.getPrecio());
-        viewHolder.description.setText(user.getDescription());
+//        User user = this.users.get(position);
+//        viewHolder.fullname.setText(user.getFullname());
+//        viewHolder.category.setText(user.getCategory());
+//        viewHolder.precio.setText(user.getPrecio());
+//        viewHolder.description.setText(user.getDescription());
 
     }
 
