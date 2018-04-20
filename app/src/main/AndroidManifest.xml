@@ -23,14 +23,15 @@
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="pe.edu.tecsup.sugarormapp" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".activities.RegisterProductoActivity" />
+        <activity android:name=".activities.RegisterUserActivity"></activity>
     </application>
 
 </manifest>

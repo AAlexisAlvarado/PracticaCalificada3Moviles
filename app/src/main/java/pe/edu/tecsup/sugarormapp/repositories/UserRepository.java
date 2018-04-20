@@ -1,8 +1,10 @@
-package pe.edu.tecsup.sugarormapp;
+package pe.edu.tecsup.sugarormapp.repositories;
 
 import com.orm.SugarRecord;
 
 import java.util.List;
+
+import pe.edu.tecsup.sugarormapp.models.User;
 
 /**
  * Created by Alumno on 19/04/2018.
@@ -20,14 +22,15 @@ public class UserRepository {
         return user;
     }
 
-    public static void create(String fullname, String email, String password ){
-        User user=new User(fullname,email,password);
+    public static void create(String username, String fullnames, String email, String password ){
+        User user=new User(username, fullnames , email , password);
         SugarRecord.save(user);
     }
 
-    public static void update(String fullname, String email, String password, Long id){
+    public static void update(String username, String fullnames, String email, String password, Long id){
         User user=SugarRecord.findById(User.class, id);
-        user.setFullname(fullname);
+        user.setUsername(username);
+        user.setFullnames(fullnames);
         user.setEmail(email);
         user.setPassword(password);
         SugarRecord.save(user);

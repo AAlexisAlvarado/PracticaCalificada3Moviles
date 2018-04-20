@@ -1,4 +1,4 @@
-package pe.edu.tecsup.sugarormapp;
+package pe.edu.tecsup.sugarormapp.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import java.util.List;
+
+import pe.edu.tecsup.sugarormapp.adapters.ProductoAdapter;
+import pe.edu.tecsup.sugarormapp.R;
+import pe.edu.tecsup.sugarormapp.repositories.UserRepository;
+import pe.edu.tecsup.sugarormapp.models.User;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,20 +33,20 @@ public class MainActivity extends AppCompatActivity {
 
         //Enviar datos adapter or recyclerview
         List<User> users = UserRepository.list();
-        usersList.setAdapter(new UserAdapter(users));
+        usersList.setAdapter(new ProductoAdapter(users));
     }
 
     public void callRegisterForm(View view){
-        startActivityForResult(new Intent(this, RegisterActivity.class),REGISTER_FORM_REQUEST);
+        startActivityForResult(new Intent(this, RegisterProductoActivity.class),REGISTER_FORM_REQUEST);
     }
 
-    //return from RegisterActivity
+    //return from RegisterProductoActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
 
         //refresh data
-        UserAdapter adapter = (UserAdapter)usersList.getAdapter();
+        ProductoAdapter adapter = (ProductoAdapter)usersList.getAdapter();
 
         List<User> users=UserRepository.list();
         adapter.setUsers(users);

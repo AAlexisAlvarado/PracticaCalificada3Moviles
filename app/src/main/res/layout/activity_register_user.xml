@@ -12,10 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:textSize="20sp"
-        android:text="@string/register_producto"/>
+        android:text="@string/register_username"/>
 
     <EditText
-        android:id="@+id/fullname_input"
+        android:id="@+id/username_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp" />
@@ -25,10 +25,10 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:textSize="20sp"
-        android:text="@string/register_category"/>
+        android:text="@string/register_fullnames"/>
 
     <EditText
-        android:id="@+id/category_input"
+        android:id="@+id/fullnames_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp" />
@@ -38,10 +38,10 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:textSize="20sp"
-        android:text="@string/register_precio"/>
+        android:text="@string/register_email"/>
 
     <EditText
-        android:id="@+id/precio_input"
+        android:id="@+id/emails_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp" />
@@ -51,18 +51,19 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:textSize="20sp"
-        android:text="@string/register_description"/>
+        android:text="@string/register_password"/>
 
     <EditText
-        android:id="@+id/description_input"
+        android:id="@+id/password_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         android:layout_marginBottom="16dp" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="callRegister"
-        android:text="@string/register_saved" />
+        android:text="@string/register_save" />
 
 </LinearLayout>

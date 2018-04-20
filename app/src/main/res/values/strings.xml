@@ -1,7 +1,17 @@
 <resources>
-    <string name="app_name">SugarORMApp</string>
-    <string name="register_fullname">Nombres Completo</string>
-    <string name="register_email">Colocar Email</string>
-    <string name="register_password">Contraseña a usar</string>
-    <string name="register_save">Guardar</string>
+    <string name="app_name">Catalogo</string>
+
+    <string name="register_product_title">Registro de Producto</string>
+    <string name="register_user_title">Registro de Usuario</string>
+
+    <string name="register_username">Nombre de Usuario</string>
+    <string name="register_fullnames">Nombres Completos</string>
+    <string name="register_email">Correo Electrónico</string>
+    <string name="register_password">Contraseña</string>
+    <string name="register_save">Registrar</string>
+    <string name="register_producto">Nombre del Producto</string>
+    <string name="register_category">Categoría</string>
+    <string name="register_precio">Precio</string>
+    <string name="register_description">Descripción</string>
+    <string name="register_saved">Registrar</string>
 </resources>

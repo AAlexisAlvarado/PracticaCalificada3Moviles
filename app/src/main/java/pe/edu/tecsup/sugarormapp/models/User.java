@@ -1,4 +1,4 @@
-package pe.edu.tecsup.sugarormapp;
+package pe.edu.tecsup.sugarormapp.models;
 
 import com.orm.dsl.Table;
 
@@ -9,7 +9,8 @@ import com.orm.dsl.Table;
 public class User {
 
     private Long id;
-    private String fullname;
+    private String username;
+    private String fullnames;
     private String email;
     private String password;
 
@@ -17,10 +18,11 @@ public class User {
 
     }
 
-    public User(String fullname, String email, String password ){
+    public User(String username, String fullnames, String email, String password ){
+        this.setUsername(username);
+        this.setFullnames(fullnames);
         this.setEmail(email);
         this.setPassword(password);
-        this.setFullname(fullname);
     }
 
 
@@ -32,12 +34,20 @@ public class User {
         this.id = id;
     }
 
-    public String getFullname() {
-        return fullname;
+    public String getUsername() {
+        return username;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getFullnames() {
+        return fullnames;
+    }
+
+    public void setFullnames(String fullnames) {
+        this.fullnames = fullnames;
     }
 
     public String getEmail() {
@@ -60,7 +70,8 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", fullname='" + fullname + '\'' +
+                ", username='" + username + '\'' +
+                ", fullname='" + fullnames + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';
