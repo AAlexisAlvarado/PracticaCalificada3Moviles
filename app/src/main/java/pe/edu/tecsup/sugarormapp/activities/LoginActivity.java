@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Correo o contraseña inválidos", Toast.LENGTH_SHORT).show();
             return;
         }else {
-            Toast.makeText(this, "Bienvenid@ " + user.getFullname(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Bienvenid@ " + user.getFullnames(), Toast.LENGTH_SHORT).show();
 
             SharedPreferences.Editor editor = sharedPreferences.edit();
             boolean success = editor
