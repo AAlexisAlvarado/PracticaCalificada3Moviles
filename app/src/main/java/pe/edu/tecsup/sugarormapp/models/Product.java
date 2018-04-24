@@ -1,9 +1,11 @@
 package pe.edu.tecsup.sugarormapp.models;
 
+import com.orm.dsl.Table;
+
 /**
  * Created by Alumno on 20/04/2018.
  */
-
+@Table
 public class Product {
 
     private String fullname;

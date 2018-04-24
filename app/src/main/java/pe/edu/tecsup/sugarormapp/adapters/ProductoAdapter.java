@@ -9,6 +9,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import pe.edu.tecsup.sugarormapp.R;
+import pe.edu.tecsup.sugarormapp.models.Product;
 import pe.edu.tecsup.sugarormapp.models.User;
 
 /**
@@ -51,11 +52,11 @@ public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(ProductoAdapter.ViewHolder viewHolder, int position) {
-//        User user = this.users.get(position);
-//        viewHolder.fullname.setText(user.getFullname());
-//        viewHolder.category.setText(user.getCategory());
-//        viewHolder.precio.setText(user.getPrecio());
-//        viewHolder.description.setText(user.getDescription());
+        Product product = this.product.get(position);
+        viewHolder.fullname.setText(product.getFullname());
+        viewHolder.category.setText(product.getCategory());
+        viewHolder.precio.setText(product.getPrecio());
+        viewHolder.description.setText(product.getDescription());
 
     }
 

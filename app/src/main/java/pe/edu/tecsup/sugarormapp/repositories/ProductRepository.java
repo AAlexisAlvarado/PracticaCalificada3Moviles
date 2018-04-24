@@ -27,14 +27,14 @@ public class ProductRepository {
         SugarRecord.save(productRepository);
     }
 
- //  public static void update(String fullname, String category, Double precio, String description, Long id){
-   //     Product product=SugarRecord.findById(Product.class, id);
-     //   product.setFullname(fullname);
-       // product.setCategory(category);
-        //product.setPrecio(precio);
-       // product.setDescription(description);
-        //product.save(product);
-   // }
+   public static void update(String fullname, String category, Double precio, String description, Long id){
+        Product product=SugarRecord.findById(Product.class, id);
+        product.setFullname(fullname);
+        product.setCategory(category);
+        product.setPrecio(precio);
+        product.setDescription(description);
+        SugarRecord.save(product);
+    }
 
     public static void delete(Long id){
         ProductRepository productRepository=SugarRecord.findById(ProductRepository.class, id);
